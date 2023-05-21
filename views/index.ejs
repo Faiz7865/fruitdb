@@ -1,0 +1,24 @@
+<%- include("include/header") -%>
+<div class="d-flex align-items-center justify-content-between mb-4">
+    <h1 class="mb-0">Add new Fruit</h1>
+    <a href="/addfruits" class="btn btn-lg btn-primary">Add Fruits</a>
+</div>
+<div class="row">
+    <% fruits.forEach((fruit) => { %>
+        <div class="col-lg-4">
+            <div class="shadow-lg rounded mb-3 p-4">
+                <h2><%= fruit.name %></h2>
+                <h4><%= fruit.value %></h4>
+                <p><%= fruit.rating %></p>
+                <form action="/" method="post">
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-danger" value="<%= fruit._id %>" name="removeBtn">Remove</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<%- include("include/footer") -%>
+    

@@ -1,0 +1,24 @@
+<%- include("include/header") -%>
+
+<div>
+    <h1>Add new Fruit</h1>
+
+    <form action="/addfruits" method="post">
+        <div class="mb-3">
+            <label for="fruitName" class="form-label">Fruit Name</label>
+            <input type="text" class="form-control" id="fruitName" name="fruitName">
+        </div>
+        <div class="mb-3">
+            <label for="fruitValue" class="form-label">Fruit Value</label>
+            <input type="text" class="form-control" id="fruitValue" name="fruitValue">
+        </div>
+        <div class="mb-3">
+            <label for="review" class="form-label">Review</label>
+            <input type="text" class="form-control" id="review" name="review">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<%- include("include/footer") -%>
+    
